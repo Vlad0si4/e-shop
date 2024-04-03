@@ -1,5 +1,7 @@
+import Routers from "./routers/Routers";
+
 function App() {
-  return <h1 className="text-red-600">hEllo</h1>;
+  return <Routers />;
 }
 
 export default App;
