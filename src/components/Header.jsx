@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { RiShoppingCartLine } from "react-icons/ri";
@@ -23,14 +23,15 @@ const navigateLinks = [
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between h-[70px] container">
-      <div className="flex items-center gap-4 ">
-        <img src={logo} alt="logo" className="w-[40px] h-[40px]" />
-        <div className="flex flex-col">
-          <h1 className="font-bold text-xl ">E-Shop</h1>
+    <header className="flex items-center justify-between h-[70px] container ">
+      <Link to="/">
+        <div className="flex items-center gap-4 ">
+          <img src={logo} alt="logo" className="w-[40px] h-[40px]" />
+          <div className="flex flex-col">
+            <h1 className="font-bold text-xl ">E-Shop</h1>
+          </div>
         </div>
-      </div>
-
+      </Link>
       <nav>
         <ul className="flex items-center gap-12 font-medium text-xl ">
           {navigateLinks.map((item, idx) => (

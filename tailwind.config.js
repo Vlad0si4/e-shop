@@ -13,6 +13,7 @@ export default {
         heroBg: "#d6e5fb",
         smallTextColor: "#999",
         headingTextColor: "#0a1d37",
+        hover: "#373f6f",
       },
     },
   },
