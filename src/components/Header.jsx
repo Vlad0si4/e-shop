@@ -23,16 +23,16 @@ const navigateLinks = [
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between w-full px-[20px] h-[70px]">
-      <div className="flex items-center gap-4">
+    <header className="flex items-center justify-between h-[70px] container">
+      <div className="flex items-center gap-4 ">
         <img src={logo} alt="logo" className="w-[40px] h-[40px]" />
         <div className="flex flex-col">
-          <h1 className="text-lg font-bold">E-Shop</h1>
+          <h1 className="font-bold text-xl ">E-Shop</h1>
         </div>
       </div>
 
       <nav>
-        <ul className="flex items-center gap-12 font-medium ">
+        <ul className="flex items-center gap-12 font-medium text-xl ">
           {navigateLinks.map((item, idx) => (
             <li key={idx}>
               <NavLink to={item.path} active="active">
@@ -45,14 +45,14 @@ export const Header = () => {
 
       <div className="flex items-center justify-center gap-6 cursor-pointer relative">
         <div>
-          <FaRegHeart className="w-[20px] h-[20px]" />
+          <FaRegHeart size={22} />
           <span className="absolute top-[-20%] left-[10%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex justify-center items-center text-xs">
             4
           </span>
         </div>
 
         <div>
-          <RiShoppingCartLine className="w-[22px] h-[22px]" />
+          <RiShoppingCartLine size={25} />
           <span className="absolute top-[-20%] left-[50%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex  justify-center items-center text-xs">
             1
           </span>
@@ -62,7 +62,7 @@ export const Header = () => {
           whileTap={{ scale: 1.2 }}
           src={userIcon}
           alt="user-icon"
-          className="w-[35px] h-[35px]"
+          className="w-[40px] h-[40px]"
         />
       </div>
 

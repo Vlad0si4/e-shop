@@ -4,7 +4,7 @@ import { Header } from "../components/Header";
 
 export const SharedLayout = () => {
   return (
-    <div className="">
+    <div>
       <Header />
       <main>
         <Outlet />
