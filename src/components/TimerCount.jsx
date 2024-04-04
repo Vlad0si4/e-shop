@@ -5,7 +5,7 @@ import { Clock } from "./Clock";
 
 export const TimerCount = () => {
   return (
-    <section className="bg-primaryColor text-white ">
+    <section className="bg-primaryColor text-white mb-20">
       <div className=" flex items-center justify-between container">
         <div>
           <h3 className="text-xl font-bold mb-3">Limited Offers</h3>
