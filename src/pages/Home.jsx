@@ -2,9 +2,22 @@ import { Link } from "react-router-dom";
 import heroImg from "../assets/images/hero-img.png";
 import { motion } from "framer-motion";
 import { Services } from "../components/Services";
+import { TrendingProducts } from "../components/TrendingProducts";
+
+import products from "../assets/data/products";
+import { useEffect, useState } from "react";
+import { BestSales } from "../components/BestSales";
 
 const Home = () => {
+  const [data, setData] = useState([]);
   const year = new Date().getFullYear();
+
+  useEffect(() => {
+    const filteredProduct = products.filter(
+      (item) => item.category === "chair"
+    );
+    setData(filteredProduct);
+  }, []);
 
   return (
     <>
@@ -43,6 +56,8 @@ const Home = () => {
         </div>
       </section>
       <Services />
+      <TrendingProducts data={data} />
+      <BestSales />
     </>
   );
 };
