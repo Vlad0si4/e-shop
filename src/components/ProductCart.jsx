@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export const ProductCart = ({ item }) => {
-  console.log(item);
   return (
-    <div className="flex flex-col cursor-pointer">
+    <div className="flex flex-col cursor-pointer min-w-[150px]">
       <Link to={`/shop/${item.id}`}>
         <div>
           <motion.img

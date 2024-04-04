@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 
 export const Services = () => {
   return (
-    <section className="container flex gap-5 flex-wrap justify-center">
+    <section className="container flex gap-5 flex-wrap justify-center mb-20">
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="p-5 bg-card01 flex items-center my-10 rounded-xl gap-5 cursor-pointer "
+        className="p-5 bg-card01 flex items-center rounded-xl gap-5 cursor-pointer "
       >
         <span className="bg-primaryColor p-3 rounded-full text-white hover:bg-hover">
           <GrDeliver size={22} />
@@ -23,7 +23,7 @@ export const Services = () => {
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="p-5 bg-[#e2f2b2] flex items-center my-10 rounded-xl gap-5 cursor-pointer "
+        className="p-5 bg-[#e2f2b2] flex items-center rounded-xl gap-5 cursor-pointer "
       >
         <span className="bg-primaryColor p-3 rounded-full text-white hover:bg-hover">
           <LuRefreshCcw size={22} />
@@ -36,7 +36,7 @@ export const Services = () => {
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="p-5 bg-[#ceebe9] flex items-center my-10 rounded-xl gap-5 cursor-pointer "
+        className="p-5 bg-[#ceebe9] flex items-center rounded-xl gap-5 cursor-pointer "
       >
         <span className="bg-primaryColor p-3 rounded-full text-white hover:bg-hover">
           <RiSecurePaymentLine size={22} />
