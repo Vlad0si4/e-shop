@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 export const ProductCart = ({ item }) => {
   return (
-    <div className="flex flex-col cursor-pointer ">
+    <div className="flex flex-col cursor-pointer min-w-[200px] min-h-[200px] ">
       <Link to={`/shop/${item.id}`}>
         <div>
           <motion.img
             whileHover={{ scale: 0.9 }}
             src={item.imgUrl}
             alt="product image"
-            className="object-cover w-[80%] h-[80%]"
+            className=" h-[100%] w-[100%] object-cover"
           />
         </div>
         <div>

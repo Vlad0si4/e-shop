@@ -46,10 +46,10 @@ export const Services = () => {
           <p className="mt-2  ">Lorem ipsum dolor sit amet.</p>
         </div>
       </motion.div>
-      {/* <motion.div
+      <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="p-5 bg-[#d6e5fb] flex items-center my-10 rounded-xl gap-5 cursor-pointer "
+        className="p-5 bg-[#d6e5fb] flex items-center rounded-xl gap-5 cursor-pointer "
       >
         <span className="bg-primaryColor p-3 rounded-full text-white hover:bg-hover">
           <RiExchangeDollarLine size={22} />
@@ -58,7 +58,7 @@ export const Services = () => {
           <h3 className="font-semibold text-primaryColor ">Back Guarantee</h3>
           <p className="mt-2  ">Lorem ipsum dolor sit amet.</p>
         </div>
-      </motion.div> */}
+      </motion.div>
     </section>
   );
 };

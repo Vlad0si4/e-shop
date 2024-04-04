@@ -1,10 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
-import { HiMenuAlt1 } from "react-icons/hi";
+
 import { RiShoppingCartLine } from "react-icons/ri";
 import logo from "../assets/images/eco-logo.png";
 import userIcon from "../assets/images/user-icon.png";
 import { motion } from "framer-motion";
+import { BurgerMenu } from "./BurgerMenu";
 
 const navigateLinks = [
   {
@@ -23,23 +24,29 @@ const navigateLinks = [
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between h-[70px] container ">
+    <header className="flex  items-center justify-between h-[70px] container ">
       <Link to="/">
-        <div className="flex items-center gap-4 ">
+        <motion.div
+          className="flex items-center gap-4 "
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
           <img src={logo} alt="logo" className="w-[40px] h-[40px]" />
-          <div className="flex flex-col">
-            <h1 className="font-bold text-xl ">E-Shop</h1>
-          </div>
-        </div>
+          <h1 className="font-bold text-xl ">E-Shop</h1>
+        </motion.div>
       </Link>
       <nav>
         <ul className="flex items-center gap-12 font-medium text-xl ">
           {navigateLinks.map((item, idx) => (
-            <li key={idx}>
+            <motion.li
+              key={idx}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <NavLink to={item.path} active="active">
                 {item.display}
               </NavLink>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </nav>
@@ -67,9 +74,7 @@ export const Header = () => {
         />
       </div>
 
-      <div className="hidden">
-        <HiMenuAlt1 className="w-[25px] h-[25px] " />
-      </div>
+      <BurgerMenu />
     </header>
   );
 };
