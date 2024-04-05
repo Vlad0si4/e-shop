@@ -37,31 +37,31 @@ export const Clock = () => {
   }, []);
 
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex  md:items-center md:gap-5 ">
       <div className="text-center">
-        <h1 className="text-4xl font-bold">{days}</h1>
-        <p className="text-xl">Days</p>
+        <h1 className="md:text-4xl md:font-bold">{days}</h1>
+        <p className="md:text-xl text-xs">Days</p>
       </div>
       <div>
-        <span className="text-4xl">:</span>
+        <span className="md:text-4xl">:</span>
       </div>
       <div className="text-center">
-        <h1 className="text-4xl font-bold">{hours}</h1>
-        <p className="text-xl">Hours</p>
+        <h1 className="md:text-4xl md:font-bold">{hours}</h1>
+        <p className="md:text-xl text-xs">Hours</p>
       </div>
       <div>
-        <span className="text-4xl">:</span>
+        <span className="md:text-4xl">:</span>
       </div>
       <div className="text-center">
-        <h1 className="text-4xl font-bold">{minutes}</h1>
-        <p className="text-xl">Minutes</p>
+        <h1 className="md:text-4xl md:font-bold">{minutes}</h1>
+        <p className="md:text-xl text-xs">Minutes</p>
       </div>
       <div>
-        <span className="text-4xl">:</span>
+        <span className="md:text-4xl">:</span>
       </div>
       <div className="text-center">
-        <h1 className="text-4xl font-bold">{seconds}</h1>
-        <p className="text-xl">Seconds</p>
+        <h1 className="md:text-4xl md:font-bold">{seconds}</h1>
+        <p className="md:text-xl text-xs">Seconds</p>
       </div>
     </div>
   );
