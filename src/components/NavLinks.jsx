@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const navigateLinks = [
   {
@@ -38,4 +39,9 @@ export const NavLinks = ({ isInMenu, onClick }) => {
       </ul>
     </nav>
   );
+};
+
+NavLinks.propTypes = {
+  isInMenu: PropTypes.bool,
+  onClick: PropTypes.func,
 };

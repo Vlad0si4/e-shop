@@ -1,6 +1,7 @@
 import { FiPlus } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export const ProductCart = ({ item }) => {
   return (
@@ -33,4 +34,14 @@ export const ProductCart = ({ item }) => {
       </div>
     </div>
   );
+};
+
+ProductCart.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    imgUrl: PropTypes.string.isRequired,
+    productName: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
 };

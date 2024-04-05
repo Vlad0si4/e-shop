@@ -1,4 +1,5 @@
 import { ProductList } from "./ProductList";
+import PropTypes from "prop-types";
 
 export const BestSales = ({ data }) => {
   return (
@@ -9,4 +10,8 @@ export const BestSales = ({ data }) => {
       <ProductList data={data} />
     </section>
   );
+};
+
+BestSales.propTypes = {
+  data: PropTypes.array.isRequired, // Массив товаров
 };

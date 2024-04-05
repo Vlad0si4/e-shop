@@ -1,4 +1,5 @@
 import { ProductList } from "./ProductList";
+import PropTypes from "prop-types";
 
 export const TrendingProducts = ({ data }) => {
   return (
@@ -9,4 +10,8 @@ export const TrendingProducts = ({ data }) => {
       <ProductList data={data} />
     </section>
   );
+};
+
+TrendingProducts.propTypes = {
+  data: PropTypes.array.isRequired,
 };

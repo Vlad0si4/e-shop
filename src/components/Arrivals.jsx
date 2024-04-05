@@ -1,4 +1,5 @@
 import { ProductList } from "./ProductList";
+import PropTypes from "prop-types";
 
 export const Arrivals = ({ mobile, wireless }) => {
   const combinedData = [...mobile, ...wireless];
@@ -10,4 +11,9 @@ export const Arrivals = ({ mobile, wireless }) => {
       <ProductList data={combinedData} />
     </section>
   );
+};
+
+Arrivals.propTypes = {
+  mobile: PropTypes.array.isRequired,
+  wireless: PropTypes.array.isRequired,
 };

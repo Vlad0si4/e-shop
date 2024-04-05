@@ -1,4 +1,5 @@
 import { ProductCart } from "./ProductCart";
+import PropTypes from "prop-types";
 
 export const ProductList = ({ data }) => {
   return (
@@ -8,4 +9,8 @@ export const ProductList = ({ data }) => {
       ))}
     </div>
   );
+};
+
+ProductList.propTypes = {
+  data: PropTypes.array.isRequired,
 };
