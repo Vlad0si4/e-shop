@@ -32,11 +32,11 @@ export const Header = () => {
 
       <div className="flex items-center gap-4 sm:gap-6 cursor-pointer relative ">
         <FaRegHeart size={22} />
-        <span className="absolute top-[-20%] left-[10%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex justify-center items-center text-xs">
+        <span className="absolute top-[-25%] md:top-[-12%] left-[10%]  bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex justify-center items-center text-xs">
           4
         </span>
         <RiShoppingCartLine size={25} />
-        <span className="absolute top-[-20%] left-[35%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex  justify-center items-center text-xs">
+        <span className="absolute top-[-20%] left-[35%] md:left-[45%] md:top-[-10%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex  justify-center items-center text-xs">
           1
         </span>
         <motion.img
