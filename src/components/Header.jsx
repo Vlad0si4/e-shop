@@ -8,12 +8,15 @@ import userIcon from "../assets/images/user-icon.png";
 import { motion } from "framer-motion";
 import { BurgerMenu } from "./BurgerMenu";
 import { NavLinks } from "./NavLinks";
+import { useSelector } from "react-redux";
+import { selectQuantity } from "../redux/slices/cartSelectors";
 
 export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const totalQuantity = useSelector(selectQuantity);
 
   return (
-    <header className="flex items-center justify-between h-[70px] container ">
+    <header className=" bg-white shadow-md flex items-center justify-between h-[70px] container ">
       <Link to="/">
         <motion.div
           className="flex items-center gap-2 sm:gap-4 "
@@ -36,9 +39,14 @@ export const Header = () => {
           4
         </span>
         <RiShoppingCartLine size={25} />
-        <span className="absolute top-[-20%] left-[35%] md:left-[45%] md:top-[-10%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex  justify-center items-center text-xs">
-          1
-        </span>
+        {!totalQuantity ? (
+          ""
+        ) : (
+          <span className="absolute top-[-20%] left-[35%] md:left-[45%] md:top-[-10%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex  justify-center items-center text-xs">
+            {totalQuantity}
+          </span>
+        )}
+
         <motion.img
           whileTap={{ scale: 1.2 }}
           src={userIcon}
