@@ -36,7 +36,7 @@ export const Header = () => {
           4
         </span>
         <RiShoppingCartLine size={25} />
-        <span className="absolute top-[-20%] left-[50%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex  justify-center items-center text-xs">
+        <span className="absolute top-[-20%] left-[35%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex  justify-center items-center text-xs">
           1
         </span>
         <motion.img
