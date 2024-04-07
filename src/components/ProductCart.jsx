@@ -23,24 +23,24 @@ export const ProductCart = ({ item }) => {
     toast.success(`${productName}  added successful`);
   };
   return (
-    <div className="flex flex-col cursor-pointer min-w-[200px] min-h-[200px] ">
-      <Link to={`/shop/${id}`}>
+    <div className="flex flex-col cursor-pointer px-2">
+      <Link to={`shop/${id}`}>
         <div>
           <motion.img
             whileHover={{ scale: 0.9 }}
             src={imgUrl}
             alt="product image"
-            className=" h-[100%] w-[100%] object-cover"
+            className=" w-[300px] h-[300px] object-contain "
           />
         </div>
         <div>
-          <h3 className="text-xl font-medium mt-3 text-primaryColor">
+          <h3 className="text-l font-bold mt-3 text-primaryColor">
             {productName}
           </h3>
           <span className="text-s font-light">{category}</span>
         </div>
       </Link>
-      <div className="flex items-center justify-between mt-4">
+      <div className="flex items-center justify-between mt-4  ">
         <span className=" font-bold">$ {price}</span>
         <motion.span
           whileHover={{ scale: 1.1 }}

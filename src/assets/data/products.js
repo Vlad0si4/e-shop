@@ -1,6 +1,7 @@
 import productImg01 from "../images/double-sofa-01.png";
 import productImg02 from "../images/double-sofa-02.png";
 import productImg03 from "../images/double-sofa-03.png";
+import productImg004 from "../images/98.jpg";
 
 import productImg04 from "../images/single-sofa-01.jpg";
 import productImg05 from "../images/single-sofa-02.jpg";
@@ -96,7 +97,7 @@ const products = [
   {
     id: "26",
     productName: "Rivet Bigelow Modern ",
-    imgUrl: productImg02,
+    imgUrl: productImg004,
     category: "sofa",
     price: 253,
     shortDesc:
