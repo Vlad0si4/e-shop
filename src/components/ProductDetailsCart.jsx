@@ -4,8 +4,13 @@ import { FaStarHalf } from "react-icons/fa";
 
 import products from "../assets/data/products";
 import { Button } from "./Button";
+import { useEffect } from "react";
 
 export const ProductDetailsCart = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
 
