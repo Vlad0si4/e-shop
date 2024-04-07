@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 
@@ -14,10 +14,17 @@ import { selectQuantity } from "../redux/slices/cartSelectors";
 export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const totalQuantity = useSelector(selectQuantity);
+  const { id } = useParams();
 
   return (
-    <header className=" sticky top-0  bg-white shadow-md flex  h-[70px]">
-      <div className="container flex items-center justify-between">
+    <header
+      className={
+        !id
+          ? "sticky top-0  bg-white shadow-md flex  h-[70px]"
+          : "static h-[70px] flex"
+      }
+    >
+      <div className="container flex items-center justify-between shadow-md">
         <Link to="/">
           <motion.div
             className="flex items-center gap-2 sm:gap-4 "
