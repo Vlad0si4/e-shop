@@ -23,9 +23,9 @@ export const ProductCart = ({ item }) => {
     toast.success(`${productName}  added successful`);
   };
   return (
-    <div className="flex flex-col cursor-pointer px-2">
-      <Link to={`shop/${id}`}>
-        <div>
+    <div className="flex flex-col cursor-pointer">
+      <Link to={`/shop/${id}`}>
+        <div className="flex items-center justify-center">
           <motion.img
             whileHover={{ scale: 0.9 }}
             src={imgUrl}

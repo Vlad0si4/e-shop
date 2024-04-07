@@ -46,7 +46,7 @@ const products = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
     ],
-    avgRating: 4.5,
+    avgRating: 2.3,
   },
 
   {
@@ -92,7 +92,7 @@ const products = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
     ],
-    avgRating: 4.7,
+    avgRating: 3.7,
   },
   {
     id: "26",
@@ -136,7 +136,7 @@ const products = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
     ],
-    avgRating: 4.7,
+    avgRating: 3.7,
   },
 
   {

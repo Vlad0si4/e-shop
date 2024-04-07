@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import heroImg from "../assets/images/hero-img.png";
-import { motion } from "framer-motion";
-
+import { Button } from "./Button";
 export const Hero = () => {
   const year = new Date().getFullYear();
 
@@ -18,16 +16,7 @@ export const Hero = () => {
             dolor porro ullam recusandae nobis id error! Excepturi,
             necessitatibus officiis.
           </p>
-
-          <Link to="shop">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="outline-none py-[8px] px-5 bg-primaryColor text-white cursor-pointer text-base rounded-xl mt-10 hover:bg-hover"
-            >
-              SHOP NOW{" "}
-            </motion.button>
-          </Link>
+          <Button link="shop" desc="SHOP NOW" />
         </div>
         <div>
           <img

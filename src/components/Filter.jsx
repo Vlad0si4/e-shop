@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FiSearch } from "react-icons/fi";
 
 export const Filter = ({ filter, search }) => {
@@ -12,7 +13,7 @@ export const Filter = ({ filter, search }) => {
   };
 
   return (
-    <div className=" container flex items-center justify-center gap-10 my-[50px]">
+    <div className=" container flex items-center justify-center gap-3 sm:gap-10 my-[50px] flex-col sm:flex-row">
       <div>
         <select
           className="py-2 px-5 cursor-pointer focus:outline-none border bg-primaryColor text-white text-xs  rounded-md w-[150px]"
@@ -46,4 +47,9 @@ export const Filter = ({ filter, search }) => {
       </div>
     </div>
   );
+};
+
+Filter.propTypes = {
+  filter: PropTypes.func.isRequired,
+  search: PropTypes.func.isRequired,
 };
