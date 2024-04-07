@@ -16,7 +16,7 @@ export const Filter = ({ filter, search }) => {
     <div className=" container flex items-center justify-center gap-3 sm:gap-10 my-[50px] flex-col sm:flex-row">
       <div>
         <select
-          className="py-2 px-5 cursor-pointer focus:outline-none border bg-primaryColor text-white text-xs  rounded-md w-[150px]"
+          className="py-4 px-5 cursor-pointer focus:outline-none border bg-primaryColor text-white text-xs  rounded-md w-[250px]"
           onChange={handleChange}
         >
           <option value="all">All Categories</option>
@@ -28,7 +28,7 @@ export const Filter = ({ filter, search }) => {
         </select>
       </div>
       <div>
-        <select className="py-2 px-5 cursor-pointer focus:outline-none border bg-primaryColor text-white text-xs rounded-md w-[150px]">
+        <select className="py-4 px-5 cursor-pointer focus:outline-none border bg-primaryColor text-white text-xs rounded-md w-[250px] ">
           <option>Sort By</option>
           <option value="ascending">Ascending</option>
           <option value="descending">Descending</option>
