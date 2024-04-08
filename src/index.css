@@ -27,3 +27,7 @@ body {
     url("./assets/images/productSection.jpg") no-repeat center;
   background-size: cover;
 }
+
+html {
+  scroll-behavior: smooth;
+}

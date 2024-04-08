@@ -18,13 +18,14 @@ export const Header = () => {
 
   return (
     <header
-      className={
-        !id
-          ? "sticky top-0  bg-white shadow-md flex  h-[70px]"
-          : "static h-[70px] flex"
-      }
+      className="sticky top-0  bg-white shadow-md flex  h-[70px]"
+      // className={
+      //   !id
+      //     ? "sticky top-0  bg-white shadow-md flex  h-[70px]"
+      //     : "static h-[70px] flex"
+      // }
     >
-      <div className="container flex items-center justify-between shadow-md">
+      <div className="container flex items-center justify-between ">
         <Link to="/">
           <motion.div
             className="flex items-center gap-2 sm:gap-4 "

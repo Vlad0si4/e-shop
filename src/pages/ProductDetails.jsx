@@ -1,10 +1,9 @@
-import { Filter } from "../components/Filter";
-import { ProductDetailsCart } from "../components/ProductDetailsCart";
+import { ProductDetailsCard } from "../components/ProductDetailsCard";
 
 const ProductDetails = () => {
   return (
     <div className="container">
-      <ProductDetailsCart />
+      <ProductDetailsCard />
     </div>
   );
 };
