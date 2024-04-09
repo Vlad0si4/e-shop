@@ -1,11 +1,7 @@
 import { ProductDetailsCard } from "../components/ProductDetailsCard";
 
 const ProductDetails = () => {
-  return (
-    <div className="container">
-      <ProductDetailsCard />
-    </div>
-  );
+  return <ProductDetailsCard />;
 };
 
 export default ProductDetails;

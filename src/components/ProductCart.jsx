@@ -17,7 +17,7 @@ export const ProductCart = ({ item }) => {
         id: id,
         productName: productName,
         price: price,
-        image: imgUrl,
+        imgUrl: imgUrl,
       })
     );
     toast.success(`${productName}  added successful`);

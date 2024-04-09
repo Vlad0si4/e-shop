@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <BrowserRouter>
         <App />
-        <ToastContainer autoClose={2000} theme="light" transition={Zoom} />
+        <ToastContainer autoClose={800} theme="light" transition={Zoom} />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

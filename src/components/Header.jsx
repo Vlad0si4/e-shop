@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 
@@ -9,12 +9,17 @@ import { motion } from "framer-motion";
 import { BurgerMenu } from "./BurgerMenu";
 import { NavLinks } from "./NavLinks";
 import { useSelector } from "react-redux";
-import { selectQuantity } from "../redux/slices/cartSelectors";
+import { selectItem, selectQuantity } from "../redux/slices/cartSelectors";
 
 export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const totalQuantity = useSelector(selectQuantity);
-  const { id } = useParams();
+  const cartItems = useSelector(selectItem);
+  // const { id } = useParams();
+
+  // useEffect(() => {
+
+  // },[])
 
   return (
     <header
@@ -43,18 +48,28 @@ export const Header = () => {
         {!isMobile ? <NavLinks /> : ""}
 
         <div className="flex items-center gap-4 sm:gap-6 cursor-pointer relative ">
-          <FaRegHeart size={22} />
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+            <FaRegHeart size={22} />
+          </motion.div>
           <span className="absolute top-[-25%] md:top-[-12%] left-[10%]  bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex justify-center items-center text-xs">
             4
           </span>
-          <RiShoppingCartLine size={25} />
-          {!totalQuantity ? (
-            ""
-          ) : (
-            <span className="absolute top-[-20%] left-[35%] md:left-[45%] md:top-[-10%] bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex  justify-center items-center text-xs">
-              {totalQuantity}
-            </span>
-          )}
+
+          <Link to={"/cart"} className="hover:">
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+              <RiShoppingCartLine
+                size={25}
+                className={!totalQuantity ? "" : "fill-green-500"}
+              />
+            </motion.div>
+            {!totalQuantity ? (
+              ""
+            ) : (
+              <span className="absolute top-[-20%] left-[35%] md:left-[45%] md:top-[-10%] bg-green-500 text-white rounded-xl w-[15px] h-[15px] z-10 flex  justify-center items-center text-xs ">
+                {cartItems.length}
+              </span>
+            )}
+          </Link>
 
           <motion.img
             whileTap={{ scale: 1.2 }}

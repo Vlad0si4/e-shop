@@ -8,17 +8,14 @@ import { Button } from "./Button";
 import products from "../assets/data/products";
 
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addItem } from "../redux/slices/cartSlice";
 import { toast } from "react-toastify";
-import { selectItem } from "../redux/slices/cartSelectors";
 
 export const ProductDetailsCard = () => {
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
   const dispatch = useDispatch();
-  const selectItems = useSelector(selectItem);
-  console.log(selectItems);
 
   const {
     imgUrl,
@@ -76,11 +73,32 @@ export const ProductDetailsCard = () => {
     setRating(0);
     setComment("");
     setNewReviews((prev) => [...prev, newReview]);
+    toast.success("Thank's for you commit");
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [product]);
+
+  const containers = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const items = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
 
   return (
     <>
@@ -109,28 +127,38 @@ export const ProductDetailsCard = () => {
       </section>
       <section className="container">
         <div className="flex gap-5 items-center text-xl font-medium text-primaryColor mb-6 cursor-pointer">
-          <h3
+          <motion.h3
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             className={`${tab === "desc" ? "active" : ""}`}
             onClick={() => setTab("desc")}
           >
             Description
-          </h3>
-          <h4
+          </motion.h3>
+          <motion.h4
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             className={`${tab === "rev" ? "active" : ""}`}
             onClick={() => setTab("rev")}
           >
             Reviews ({newReviews.length})
-          </h4>
+          </motion.h4>
         </div>
         {tab === "desc" ? (
           <p className="leading-8 text-lg mb-6">{description}</p>
         ) : (
           <div>
-            <ul className="mb-6">
+            <motion.ul
+              className="mb-6 containers"
+              variants={containers}
+              initial="hidden"
+              animate="visible"
+            >
               {newReviews.map((item, idx) => (
-                <li
+                <motion.li
+                  variants={items}
                   key={idx}
-                  className="flex flex-col mb-6 gap-2 text-lg leading-8"
+                  className="flex flex-col mb-6 gap-2 text-lg leading-8 items"
                 >
                   <p className="font-medium text-lg">{item.name}</p>
                   <span className="flex flex-row">
@@ -143,9 +171,9 @@ export const ProductDetailsCard = () => {
                     ( ratings)
                   </p>
                   <p className="font-medium">{item.text}</p>
-                </li>
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
             <div className="w-[100%] sm:w-[70%] m-auto my-[50px] ">
               <form onSubmit={submitForm}>
                 <h4 className="font-medium text-lg opacity-70 mb-5">
@@ -158,14 +186,20 @@ export const ProductDetailsCard = () => {
                     className="mb-5 border w-[100%] px-3 py-4 rounded-xl"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    required
                   />
                   <div className=" cursor-pointer flex flex-row mb-5 gap-4">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <FaStar
+                      <motion.span
                         key={star}
-                        onClick={() => setRating(star)}
-                        color={star <= rating ? "orange" : "gray"}
-                      />
+                        whileTap={{ scale: 1.3 }}
+                        whileHover={{ scale: 1.2 }}
+                      >
+                        <FaStar
+                          onClick={() => setRating(star)}
+                          color={star <= rating ? "orange" : "gray"}
+                        />
+                      </motion.span>
                     ))}
                   </div>
                   <input
@@ -174,6 +208,7 @@ export const ProductDetailsCard = () => {
                     className="mb-5 border w-[100%] px-3 pb-[20%] py-3 rounded-xl"
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
+                    required
                   />
                 </div>
                 <motion.button

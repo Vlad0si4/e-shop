@@ -24,8 +24,10 @@ body {
 
 .common-section {
   background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.562)),
-    url("./assets/images/productSection.jpg") no-repeat center;
+    url("./assets/images/87158.jpg") no-repeat center;
   background-size: cover;
+  background-position: center;
+  height: 300px;
 }
 
 html {

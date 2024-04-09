@@ -1,5 +1,13 @@
+import { CartDetails } from "../components/CartDetails";
+import { CommonSection } from "../components/CommonSection";
+
 const Cart = () => {
-  return <div>Cart</div>;
+  return (
+    <>
+      <CommonSection title="Shopping Cart" />
+      <CartDetails />
+    </>
+  );
 };
 
 export default Cart;
