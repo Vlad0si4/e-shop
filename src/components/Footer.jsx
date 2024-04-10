@@ -25,7 +25,11 @@ export const Footer = () => {
           <div className="">
             <h4 className="font-bold text-xl pb-2">Top Categories</h4>
             <ul className="flex flex-col gap-3">
-              <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <motion.li
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
                 <Link to="#">Mobile Phones</Link>
               </motion.li>
               <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>

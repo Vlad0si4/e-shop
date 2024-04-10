@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 
@@ -15,7 +15,7 @@ export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const totalQuantity = useSelector(selectQuantity);
   const cartItems = useSelector(selectItem);
-  // const { id } = useParams();
+  const { id } = useParams();
 
   // useEffect(() => {
 
@@ -23,12 +23,12 @@ export const Header = () => {
 
   return (
     <header
-      className="sticky top-0  bg-white shadow-md flex  h-[70px]"
-      // className={
-      //   !id
-      //     ? "sticky top-0  bg-white shadow-md flex  h-[70px]"
-      //     : "static h-[70px] flex"
-      // }
+      // className="sticky top-0  bg-white shadow-md flex  h-[70px]"
+      className={
+        !id
+          ? "sticky top-0  bg-white shadow-md flex  h-[70px]"
+          : "static h-[70px] flex shadow-md"
+      }
     >
       <div className="container flex items-center justify-between ">
         <Link to="/">

@@ -8,6 +8,7 @@ export const Button = ({ link, desc, onClick }) => {
       <motion.button
         onClick={onClick}
         whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
         whileTap={{ scale: 0.9 }}
         className="outline-none py-[8px] px-5 bg-primaryColor text-white cursor-pointer text-base rounded-xl mt-10 hover:bg-hover"
       >
