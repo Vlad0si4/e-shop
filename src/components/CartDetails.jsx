@@ -49,7 +49,7 @@ export const CartDetails = () => {
         <div className="flex items-center justify-around flex-col md:flex-row">
           <table className="  w-[80%]  sm:w-[50%] my-10">
             <thead>
-              <tr className="border-b text-left ">
+              <tr className="border-b  text-xs md:text-lg text-center ">
                 <th className="pb-3">Image</th>
                 <th className="pb-3">Title</th>
                 <th className="pb-3">Product</th>
@@ -66,7 +66,7 @@ export const CartDetails = () => {
             >
               {cartItems?.map((item, idx) => (
                 <tr
-                  className="border-b  text-left font-medium text-primaryColor  "
+                  className="border-b font-medium text-primaryColor  text-center text-xs md:text-lg"
                   key={idx}
                 >
                   <Link to={`/shop/${item.id}`}>
@@ -74,23 +74,23 @@ export const CartDetails = () => {
                       <motion.img
                         src={item.image}
                         alt="product-image"
-                        className="w-[80px] h-[80px] object-contain border-r pr-1"
+                        className="w-[80px] h-[80px] object-contain"
                         whileHover={{ scale: 1.2 }}
                       />
                     </motion.td>
                   </Link>
-                  <td className="font-medium border-r">{item.productName}</td>
-                  <td className="border-r">$ {item.price}</td>
-                  <td className="pl-7 border-r">{item.quantity}</td>
+                  <td className=" border-r ">{item.productName}</td>
+                  <td className="border-r ">$ {item.price}</td>
+                  <td className=" border-r ">{item.quantity}</td>
                   <motion.td
-                    className="pl-5"
-                    whileHover={{ scale: 1.2, color: "#ff0000" }}
+                    className="pl-3 md:pl-5 lg:pl-6 xl:pl-9"
+                    whileHover={{ scale: 1.1, color: "#ff0000" }}
                     whileTap={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
                     <MdDeleteForever
                       className=" cursor-pointer"
-                      size={20}
+                      size={22}
                       onClick={() => handleDelete(item.id)}
                     />
                   </motion.td>
