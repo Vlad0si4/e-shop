@@ -13,8 +13,8 @@ export const CheckoutSection = () => {
       <h2 className="text-center text-2xl font-medium mt-10">
         Billing Information
       </h2>
-      <div className="flex flex-col  md:flex-row  gap-24 my-10 ">
-        <form className="flex flex-col gap-5 w-full md:w-[100%]">
+      <div className="flex flex-col  md:flex-row  gap-7 my-10 ">
+        <form className="flex flex-col gap-5 w-full ">
           <input
             type="text"
             placeholder="Enter your name"
@@ -52,7 +52,7 @@ export const CheckoutSection = () => {
           />
         </form>
         <div className="flex flex-col items-center ">
-          <div className="p-6 bg-primaryColor text-white border rounded-lg font-medium w-[200px] ">
+          <div className="p-6 bg-primaryColor text-white border rounded-lg font-medium w-full md:w-[200px] ">
             <p className="text-sm pb-3">
               Total Quantity: <span>{totalQt}</span>
             </p>
