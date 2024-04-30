@@ -51,9 +51,9 @@ export const Header = () => {
           <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
             <FaRegHeart size={22} />
           </motion.div>
-          <span className="absolute top-[-25%] md:top-[-12%] left-[10%]  bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex justify-center items-center text-xs">
+          {/* <span className="absolute top-[-25%] md:top-[-12%] left-[10%]  bg-black text-white rounded-xl w-[15px] h-[15px] z-10 flex justify-center items-center text-xs">
             4
-          </span>
+          </span> */}
 
           <Link to={"/cart"} className="hover:">
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>

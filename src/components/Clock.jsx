@@ -8,7 +8,7 @@ export const Clock = () => {
 
   useEffect(() => {
     const countDown = () => {
-      const destination = new Date("Apr 20, 2024");
+      const destination = new Date("Apr 20, 2025");
       const interval = setInterval(() => {
         const now = new Date().getTime();
         const different = destination - now;

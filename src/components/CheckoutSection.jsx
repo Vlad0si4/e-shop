@@ -52,9 +52,9 @@ export const CheckoutSection = () => {
           />
         </form>
         <div className="flex flex-col items-center ">
-          <div className="p-6 bg-primaryColor text-white border rounded-lg font-medium w-full md:w-[200px] ">
+          <div className="p-6 bg-primaryColor text-white border rounded-lg font-medium w-full md:w-[300px] ">
             <p className="text-sm pb-3">
-              Total Quantity: <span>{totalQt}</span>
+              Total Quantity: <span>{totalQt} items</span>
             </p>
             <p className="text-sm pb-3">
               Subtotal: <span>$ {totalSum}</span>
